@@ -14,12 +14,13 @@ class SomosClient {
             'Authorization': 'Bearer '+ token,
             'Content-Type': 'json',
           }), 
-    })
-    .catch(err => {
-      console.log(err.message);
-    })
-    const data = await response.json();
-    return data.artists.items;
+    });
+    if (response.error === '401'){
+      console.log('expirou o token');
+      clearToken();
+    }
+    const data = await response.json()
+    return data;
 }
     // Obs: para chamadas na api, você já tem o token salvo no cookie, `authenticated_token` - use ele para mandar no header das chamadas - da uma olhada no `src/utils`
     // retornar a lista de artistas - https://developer.spotify.com/console/get-several-artists/
