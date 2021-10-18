@@ -1,11 +1,13 @@
 import React from 'react'
-import {SearchArtist} from 'components'
+import {SearchArtist, Layout} from 'components'
 
 
 const Search = () =>{ 
     return (
         <>
-            <SearchArtist />
+            <Layout>
+                <SearchArtist />
+            </Layout>
         </>
     )
 

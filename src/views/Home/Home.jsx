@@ -14,20 +14,21 @@ class Home extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <SubHeader
-          breadcrumb={[{ text: 'Home' }]}
-          heading="Somos Front-end Challange"
-        />
+      <>
         <div className={styles.wrapper}>
-          <Link to="/Busca">
-            <button>
+          <SubHeader
+            classname={styles.card}
+            breadcrumb={[{ text: 'Home' }]}
+            heading="Somos Front-end Challange"   
+           />
+          <Link to="/Busca" >
+            <button className={styles.button}>
               <h1>Busca</h1>  
             </button>
           </Link>
         </div>
 
-      </React.Fragment>
+      </>
     )
   }
 }

@@ -2,11 +2,18 @@
   max-width: 1224px;
   padding: 30px 20px;
   margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   font: 16px/14px 'Nunito', sans-serif;
 }
 
-.search{
+.button{
   display:flex;
-  size:20px ;
-  padding: 30px 20px;
+  background-color: rgb(79, 21, 112);
+  color: white;
+  font-size: 10px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  cursor: pointer;
 }

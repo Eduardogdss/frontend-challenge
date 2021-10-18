@@ -34,7 +34,8 @@ const Artistas = (props) => {
                 setError(err.message);
                 setLoading(false);
             })
-    }
+    };
+    
     useEffect(() => {  
         (search.length > 4 ) ? (
             fetchArtists()
@@ -45,15 +46,17 @@ const Artistas = (props) => {
 
     return (enable===1) ? (
         <>
-            <div className={styles.cards}>
+            <div className={styles.grid}>
                 {artists.length<1 && <h1>Nenhum artista encontrado!</h1>}
                 {loading && <h1> Carregando ...</h1>}
                 {error && <h1>{error}</h1>}
-                {artists && artists.map((artist) => <ArtistCard key={artist.id} name={artist.name} src={artist.images[0] ? artist.images[0].url : ''}/> )} 
+                {artists && artists.map((artist) => <ArtistCard id={artist.id} key={artist.id} name={artist.name} src={artist.images[0] ? artist.images[0].url : ''}/> )} 
             </div>
         </>
         ) : (
-            <h1> Ainda não digitou 5 </h1>
+            <div className={styles.wrapper}>
+               <h1> Faça sua pesquisa! </h1>     
+            </div>
         )
 }
 export default Artistas
