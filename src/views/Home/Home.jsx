@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 
 
 class Home extends React.Component {
-  state = {}
 
   client = new SomosClient()
 
@@ -21,13 +20,12 @@ class Home extends React.Component {
             breadcrumb={[{ text: 'Home' }]}
             heading="Somos Front-end Challange"   
            />
-          <Link to="/Busca" >
-            <button className={styles.button}>
+          <Link to="/Busca" data-testid='botao-busca' >
+            <button className={styles.button} >
               <h1>Busca</h1>  
             </button>
           </Link>
         </div>
-
       </>
     )
   }

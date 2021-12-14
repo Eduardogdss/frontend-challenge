@@ -2,7 +2,7 @@ import React from 'react'
 import {PropTypes} from 'prop-types'
 
 import { Link } from 'react-router-dom'
-import styles from './ArtistCard.module.css'
+import styles from './ArtistCard.module.scss'
 const ArtistCard = (props) => {
     const {id,name,src} = props;
     const facelessImage = 'http://www.w3.org/2000/svg';

@@ -26,7 +26,6 @@ class SomosClient {
 }
   async getFullArtist(id){
     let token = getToken();
-    console.log(token);
     const url = "https://api.spotify.com/v1/artists/"+id;
     const response = await fetch(url,{
       method:'GET',
